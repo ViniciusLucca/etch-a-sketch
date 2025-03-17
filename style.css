@@ -5,3 +5,19 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.grid-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40vw;
+    height: 40vw;
+    min-width: 20vw;
+    min-height: 20vw;
+}
+
+.grid-item{
+    background-color: aquamarine;
+    border: 2px solid black;
+    padding: 5px;
+    flex-basis: 6.25%;
+}
