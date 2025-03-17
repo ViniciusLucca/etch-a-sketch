@@ -5,6 +5,8 @@ const styleSheet = document.createElement('style');
 gridItem.setAttribute('class', 'grid-item');
 
 function createGridItems(gridSize){
+    deleteGridItems();
+
     let totalItems = gridSize*gridSize;
     // Input validation
     if (gridSize > 100 || gridSize < 1){
@@ -25,7 +27,9 @@ function createGridItems(gridSize){
         gridContainer.appendChild(gridItem.cloneNode());
     }
 }
-
+function deleteGridItems(){
+    gridContainer.innerHTML     = '';
+}
 // Painting feature 
 /*  We add the hovering effect to
     the parent because the children will inherit it 
