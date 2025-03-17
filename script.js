@@ -2,6 +2,8 @@ const gridContainer = document.querySelector('.grid-container');
 const gridItem = document.createElement('div');
 // This stylesheet is necessary to adjust the items size
 const styleSheet = document.createElement('style');
+const btnChangeGrid = document.querySelector('#btnChangeGrid');
+
 gridItem.setAttribute('class', 'grid-item');
 
 function createGridItems(gridSize){
@@ -39,5 +41,13 @@ gridContainer.addEventListener('mouseover', paintBlock)
 function paintBlock(event){
     event.target.setAttribute('style', 'background-color: aquamarine');
 }
+
+btnChangeGrid.addEventListener('click', () => {
+    let gridSize;
+    do {
+        gridSize = window.prompt("Insert the number of squares per grid:");
+    } while (isNaN(gridSize))
+    createGridItems(Number(gridSize));
+})
 
 createGridItems(16);
