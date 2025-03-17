@@ -30,7 +30,7 @@ function createGridItems(gridSize){
     }
 }
 function deleteGridItems(){
-    gridContainer.innerHTML     = '';
+    gridContainer.innerHTML = '';
 }
 // Painting feature 
 /*  We add the hovering effect to
