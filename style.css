@@ -16,14 +16,6 @@
 }
 
 .grid-item{
-    border: 2px solid black;
-    padding: 5px;
-    
-    /*  Flex-basis is set to this value
-        because it wraps exactly 16 
-        divs per line 
-        
-        100/16 = 6.25
-    */
-    flex-basis: 6.25%;
+    /* Border for debugging purposes */
+    /* border: 2px solid black; */
 }
