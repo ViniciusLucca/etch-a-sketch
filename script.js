@@ -6,3 +6,13 @@ gridItem.setAttribute('class', 'grid-item');
 for (let index = 0; index < 256; index++) {
     gridContainer.appendChild(gridItem.cloneNode());
 }
+
+// Painting feature 
+/*  We add the hovering effect to
+    the parent because the children will inherit it 
+*/
+gridContainer.addEventListener('mouseover', paintBlock)
+
+function paintBlock(event){
+    event.target.setAttribute('style', 'background-color: aquamarine');
+}
